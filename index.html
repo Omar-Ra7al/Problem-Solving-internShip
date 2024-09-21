@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&family=Roboto+Mono:wght@400&display=swap"
+        rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        font-family: 'Roboto Mono', monospace;
+        background-color: #1e1e1e;
+        /* Dark background for a coding vibe */
+        color: #ffffff;
+        /* Light text color */
+        padding: 20px 0;
+    }
+
+    div.code-content {
+        max-width: 80%;
+        margin: 80px auto;
+    }
+
+    .result {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .result span {
+        flex: 1;
+
+    }
+
+    button {
+        background-color: #272822;
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        box-shadow: inset 2px 2px 10px #1e1e1e;
+    }
+</style>
+
+
+<body>
+
+
+    <h1>Problem Solving Week 3</h1>
+    <div class="code-content">
+        <pre><code class="language-js">
+        // Exercise 1: Filtering an Array
+        const evenArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(
+        "Even Array is:",
+        evenArray.filter((num) => num % 2 === 0)
+        );
+        </code></pre>
+        <div class="result">
+            <button class="ex-1">Result</button>
+            <span class="ex-1">Click to show result</span>
+        </div>
+    </div>
+
+    <div class="code-content">
+        <pre><code class="language-js">
+// Exercise: 2 Find the Largest Number
+const maxNumArr = [100, 10, 3, 8, 50, 10, 99, 1000];
+
+// 1  
+console.log("The maximum number is:", Math.max(...maxNumArr));
+
+// 2
+const sortedArr = maxNumArr.sort((a, b) => a - b);
+console.log("The maximum number is:", sortedArr[sortedArr.length - 1]);
+
+// 3
+function maxNum() {
+let max = 0;
+for (let i = 1; i < maxNumArr.length; i++) {
+if (maxNumArr[i]> max)
+ { max = maxNumArr[i]; }}
+return max;
+}
+console.log("The maximum number is:", maxNum(maxNumArr));
+    </code></pre>
+        <div class="result">
+            <button class="ex-2">Result</button>
+            <span class="ex-2">Click to show result</span>
+        </div>
+    </div>
+
+    <div class="code-content">
+        <pre><code class="language-js">
+//Exercise: 3 Reverse a String
+function reverseString(str) {
+const arrOfStr = str.split("");
+let reversedStr = "";
+for (let i = arrOfStr.length - 1; i >= 0; i--) {
+reversedStr += arrOfStr[i];
+}
+return reversedStr;
+}
+console.log("Revrsed String is :", reverseString("lahaR ramO"));
+
+        </code></pre>
+        <div class="result">
+            <button class="ex-3">Result</button>
+            <span class="ex-3">Click to show result</span>
+        </div>
+    </div>
+
+    <div class="code-content">
+        <pre><code class="language-js">
+// Exercise: 4 Remove Duplicates
+function removeDublicates(arr) {
+let newArray = [arr[0]];
+
+for (let i = 0; i < arr.length; i++) { 
+// inside loop to set the vale gin every loop let isfound=false;
+ for (let j=0; j < newArray.length; j++) 
+ { if (newArray[j]===arr[i]) { isfound=true; } } 
+ // We push when it false onley if (!isfound)
+{ newArray.push(arr[i]); } } return newArray; } 
+
+let duplicates=[1, 2, 1, 2, 3, 3, 5, 3, 4, 4, 5];
+console.log(removeDublicates(duplicates));
+
+        </code></pre>
+        <div class="result">
+            <button class="ex-4">Result</button>
+            <span class="ex-4">Click to show result</span>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
